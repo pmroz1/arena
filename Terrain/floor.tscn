@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c03runu1t7450"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_we28j"]
+albedo_color = Color(0.0549377, 0.164101, 0.0762163, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aqtd3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ibftv"]
+
+[node name="Floor" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_we28j")
+mesh = SubResource("PlaneMesh_aqtd3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ibftv")
