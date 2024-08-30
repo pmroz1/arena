@@ -6,3 +6,14 @@ enum Type {
 	Boss,
 	Special
 }
+
+enum RoutineType {
+	Idle,
+	Walk,
+	Attack,
+	Defend,
+	Dead,
+	Guard,
+	Patrol,
+	Heal,
+}

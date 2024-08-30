@@ -35,11 +35,10 @@ environment = SubResource("Environment_6npy0")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_jn0fa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86603, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98503, 1.037, -0.614481)
 
 [node name="Inkeeper" parent="." instance=ExtResource("3_xw14l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28519, 1.19078, -6.21781)
 
 [node name="Slime" parent="." instance=ExtResource("4_my03w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57682, 0.5, -6.93203)
-characterType = 1

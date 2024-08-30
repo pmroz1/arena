@@ -4,6 +4,7 @@
 albedo_color = Color(0.0549377, 0.164101, 0.0762163, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_aqtd3"]
+size = Vector2(50, 50)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xv1d8"]
 size = Vector3(100, 0.1, 100)
