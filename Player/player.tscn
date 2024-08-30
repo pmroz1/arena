@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2y5nsgmso7ep"]
+[gd_scene load_steps=6 format=3 uid="uid://d2y5nsgmso7ep"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_1wktw"]
+[ext_resource type="PackedScene" uid="uid://c8d8mxv70boh0" path="res://Probs/gun_0001.tscn" id="2_pbafj"]
+[ext_resource type="Script" path="res://Probs/gun_0001.gd" id="3_lrgoo"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ajox4"]
 
@@ -21,3 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.562948, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 0.920505, 0.390731, 0, -0.390731, 0.920505, 0, 0, -0.75)
+
+[node name="gun_0001" parent="Head/Camera3D" instance=ExtResource("2_pbafj")]
+transform = Transform3D(1.43, -0.0579627, 0.0283361, 0.0992843, 1.00051, -0.212992, -0.0385221, 0.426983, 0.502932, 0.0590577, -0.480009, -0.489653)
+script = ExtResource("3_lrgoo")
