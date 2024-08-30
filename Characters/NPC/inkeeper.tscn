@@ -1,20 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8j5drmetlqwq"]
 
-[ext_resource type="PackedScene" uid="uid://dtornd7fj5fpq" path="res://Characters/game_character.tscn" id="1_3af0n"]
+[ext_resource type="Script" path="res://Characters/game_character.gd" id="1_2nbdm"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_gmafy"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y43jl"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c8lbf"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dibkr"]
 
-[node name="Inkeeper" type="Node3D"]
-
-[node name="GameCharacter" parent="." instance=ExtResource("1_3af0n")]
+[node name="GameCharacter" type="CharacterBody3D"]
+script = ExtResource("1_2nbdm")
 characterName = "Inkeeper"
 level = 15
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GameCharacter"]
-transform = Transform3D(1, 0, 0, 0, 1.09171, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_gmafy")
+[node name="name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39959, 0)
+text = "GAME CHARACTER"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GameCharacter"]
-shape = SubResource("ConvexPolygonShape3D_c8lbf")
+[node name="level" type="Label3D" parent="name"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145385, 0)
+text = "Lv 0."
+font_size = 16
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_y43jl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_dibkr")

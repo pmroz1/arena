@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://by0lphit16gph"]
+[gd_scene load_steps=9 format=3 uid="uid://by0lphit16gph"]
 
 [ext_resource type="PackedScene" uid="uid://c03runu1t7450" path="res://Terrain/floor.tscn" id="1_7mxpd"]
 [ext_resource type="PackedScene" uid="uid://d2y5nsgmso7ep" path="res://Player/player.tscn" id="2_jn0fa"]
@@ -22,6 +22,13 @@ ssao_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
 
+[sub_resource type="Curve3D" id="Curve3D_i4xca"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2.41462, 0, -2.79344, 0, 0, 0, 0, 0, 0, 5.44652, 0, -4.95314, 0, 0, 0, 0, 0, 0, 7.58546, 0, -0.0522727, 0, 0, 0, 0, 0, 0, 2.64305, 0, 2.54353, 0, 0, 0, 0, 0, 0, 1.18941, 0, -1.46439),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
 [node name="Arena" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -38,7 +45,14 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98503, 1.037, -0.614481)
 
 [node name="Inkeeper" parent="." instance=ExtResource("3_xw14l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28519, 1.19078, -6.21781)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51631, 1.35166, -4.78154)
 
-[node name="Slime" parent="." instance=ExtResource("4_my03w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57682, 0.5, -6.93203)
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_i4xca")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.580181, 0, -0.814488, 0, 1, 0, 0.814488, 0, 0.580181, 2.41462, 0, -2.79344)
+
+[node name="Slime" parent="Path3D/PathFollow3D" instance=ExtResource("4_my03w")]
+transform = Transform3D(0.580182, 0, 0.814487, 0, 1, 0, -0.814487, 0, 0.580182, -2.54482, 0.532754, 1.15185)
+routineType = 1

@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dco47kgypwdb8"]
-
-[ext_resource type="Script" path="res://Tools/custom_path.gd" id="1_y67rd"]
+[gd_scene load_steps=3 format=3 uid="uid://cbtmk1j781k3c"]
 
 [sub_resource type="Curve3D" id="Curve3D_hlueo"]
 
+[sub_resource type="GDScript" id="GDScript_t4mjb"]
+script/source = "# File: CustomPath.gd
+extends Path3D
+
+# This script can include additional logic if needed
+# For now, it serves as a base to draw and manage paths
+"
+
 [node name="CustomPath" type="Path3D"]
 curve = SubResource("Curve3D_hlueo")
-script = ExtResource("1_y67rd")
+script = SubResource("GDScript_t4mjb")

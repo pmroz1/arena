@@ -1,24 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://b24bymrbda0ti"]
 
-[ext_resource type="PackedScene" uid="uid://dtornd7fj5fpq" path="res://Characters/game_character.tscn" id="2_pc8s5"]
+[ext_resource type="Script" path="res://Characters/game_character.gd" id="1_ywva1"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13hmk"]
-albedo_color = Color(2.79158e-06, 0.619569, 0.621595, 1)
-metallic = 0.1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrcsw"]
+albedo_color = Color(0.113725, 1, 1, 1)
 
-[sub_resource type="SphereMesh" id="SphereMesh_audc3"]
+[sub_resource type="SphereMesh" id="SphereMesh_7xrs7"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_i1fkd"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_514c5"]
 
-[node name="Slime" type="Node3D"]
-
-[node name="GameCharacter" parent="." instance=ExtResource("2_pc8s5")]
+[node name="Slime" type="CharacterBody3D"]
+script = ExtResource("1_ywva1")
 characterName = "Slime"
 characterType = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GameCharacter"]
-material_override = SubResource("StandardMaterial3D_13hmk")
-mesh = SubResource("SphereMesh_audc3")
+[node name="name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39959, 0)
+text = "GAME CHARACTER"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GameCharacter"]
-shape = SubResource("SphereShape3D_i1fkd")
+[node name="level" type="Label3D" parent="name"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145385, 0)
+text = "Lv 0."
+font_size = 16
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_vrcsw")
+mesh = SubResource("SphereMesh_7xrs7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_514c5")

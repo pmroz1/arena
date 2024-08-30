@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2y5nsgmso7ep"]
+[gd_scene load_steps=8 format=3 uid="uid://d2y5nsgmso7ep"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_1wktw"]
 [ext_resource type="Script" path="res://Player/hand.gd" id="2_6tdxr"]
 [ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://Materials/player.tres" id="2_wjf7d"]
+[ext_resource type="Script" path="res://Player/weapon.gd" id="4_1e1sa"]
+[ext_resource type="PackedScene" uid="uid://dgnvvqd8v64xu" path="res://Probs/mace_0002.tscn" id="4_1ykw2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ajox4"]
 
@@ -32,6 +34,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.195, 0.1, 0.1)
 script = ExtResource("2_6tdxr")
 camera_path = NodePath("..")
 ads_position = Vector3(-0.195, 0.1, 0.1)
+
+[node name="Weapon" type="Node3D" parent="Head/Camera3D/Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0)
+script = ExtResource("4_1e1sa")
+
+[node name="Mace" parent="Head/Camera3D/Hand/Weapon" instance=ExtResource("4_1ykw2")]
+transform = Transform3D(0.829038, 0.559193, 0, -0.559193, 0.829037, -2.98023e-08, -4.47035e-08, 2.98023e-08, 1, 0.735, -0.685, -0.765)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 anchors_preset = 15
