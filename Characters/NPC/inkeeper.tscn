@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8j5drmetlqwq"]
+
+[ext_resource type="PackedScene" uid="uid://dtornd7fj5fpq" path="res://Characters/game_character.tscn" id="1_3af0n"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gmafy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c8lbf"]
+
+[node name="Inkeeper" type="Node3D"]
+
+[node name="GameCharacter" parent="." instance=ExtResource("1_3af0n")]
+characterName = "Inkeeper"
+level = 15
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GameCharacter"]
+transform = Transform3D(1, 0, 0, 0, 1.31544, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_gmafy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameCharacter"]
+shape = SubResource("ConvexPolygonShape3D_c8lbf")

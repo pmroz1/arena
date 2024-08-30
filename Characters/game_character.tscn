@@ -1,7 +1,16 @@
-[gd_scene format=3 uid="uid://dtornd7fj5fpq"]
+[gd_scene load_steps=2 format=3 uid="uid://dtornd7fj5fpq"]
+
+[ext_resource type="Script" path="res://Characters/game_character.gd" id="1_aj85s"]
 
 [node name="GameCharacter" type="CharacterBody3D"]
+script = ExtResource("1_aj85s")
+characterName = "test"
 
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01209, 0)
+[node name="name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51884, 0)
 text = "BARTENDER"
+
+[node name="level" type="Label3D" parent="name"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145385, 0)
+text = "Lv 1."
+font_size = 16
