@@ -10,6 +10,8 @@
 
 [node name="GameCharacter" parent="." instance=ExtResource("1_3af0n")]
 characterName = "Inkeeper"
+health = null
+max_health = null
 level = 15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GameCharacter"]

@@ -9,6 +9,7 @@ extends CharacterBody3D
 @export var health: int = 100
 @export var max_health: int = 100
 @export var level: int = 1
+@export var characterType: CharacterType = CharacterType.NPC;
 
 @onready var name_label = $name# Assuming 'name_label' is the node name
 @onready var level_label = $name/level# Assuming 'level_label' is the node name
