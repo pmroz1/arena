@@ -5,9 +5,12 @@
 [node name="GameCharacter" type="CharacterBody3D"]
 script = ExtResource("1_aj85s")
 characterName = "test"
+health = null
+max_health = null
+level = null
 
 [node name="name" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39959, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51884, 0)
 text = "BARTENDER"
 
 [node name="level" type="Label3D" parent="name"]

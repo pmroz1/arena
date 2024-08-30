@@ -1,6 +1,6 @@
 extends Resource
 
-enum CharacterType {
+enum Type {
 	NPC,
 	Enemy,
 	Boss,
