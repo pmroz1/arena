@@ -11,7 +11,6 @@
 [node name="GameCharacter" parent="." instance=ExtResource("1_3af0n")]
 characterName = "Inkeeper"
 level = 15
-characterType = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GameCharacter"]
 transform = Transform3D(1, 0, 0, 0, 1.09171, 0, 0, 0, 1, 0, 0, 0)

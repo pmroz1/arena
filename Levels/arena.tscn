@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://by0lphit16gph"]
+[gd_scene load_steps=8 format=3 uid="uid://by0lphit16gph"]
 
 [ext_resource type="PackedScene" uid="uid://c03runu1t7450" path="res://Terrain/floor.tscn" id="1_7mxpd"]
 [ext_resource type="PackedScene" uid="uid://d2y5nsgmso7ep" path="res://Player/player.tscn" id="2_jn0fa"]
 [ext_resource type="PackedScene" uid="uid://c8j5drmetlqwq" path="res://Characters/NPC/inkeeper.tscn" id="3_xw14l"]
+[ext_resource type="PackedScene" uid="uid://b24bymrbda0ti" path="res://Characters/Enemies/slime.tscn" id="4_my03w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_syjxx"]
 sky_top_color = Color(0.184555, 0.463981, 0.713626, 1)
@@ -38,3 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86603, 0)
 
 [node name="Inkeeper" parent="." instance=ExtResource("3_xw14l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28519, 1.19078, -6.21781)
+
+[node name="Slime" parent="." instance=ExtResource("4_my03w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57682, 0.5, -6.93203)
+characterType = 1
