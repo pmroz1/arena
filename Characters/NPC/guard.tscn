@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvoxohs7wa0x1"]
 
 [ext_resource type="PackedScene" uid="uid://fh7pygtcougk" path="res://Characters/Components/attributes_component.tscn" id="1_8fh8l"]
-[ext_resource type="Script" path="res://Characters/Components/entity_labels_component.gd" id="1_lw88p"]
+[ext_resource type="Script" path="res://Characters/NPC/guard.gd" id="1_8svxx"]
 [ext_resource type="PackedScene" uid="uid://cb5dli5xmt257" path="res://Characters/Components/entity_labels_component.tscn" id="2_jxnsa"]
 [ext_resource type="PackedScene" uid="uid://dvjjx6q0t6612" path="res://Characters/Components/character_component.tscn" id="4_3y6yl"]
 
 [node name="Guard" type="Node3D"]
-script = ExtResource("1_lw88p")
+script = ExtResource("1_8svxx")
 
 [node name="AttributesComponent" parent="." instance=ExtResource("1_8fh8l")]
 

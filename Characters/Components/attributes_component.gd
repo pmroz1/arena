@@ -7,6 +7,7 @@ class_name AttributesComponent
 var entityName: String = "Unnamed"
 var level: int = 1
 
+
 # Methods to handle attributes
 func set_entity_name(new_name: String) -> void:
 	name = new_name

@@ -20,7 +20,11 @@ func set_level(level: int) -> void:
 	if level_label:
 		level_label.text = "Level: " + str(level)
 
-func move_labels_above_entity() -> void:
+func move_labels_above_entity(heightOverride: int = -1) -> void:
+	# if heightOverride is not null, use it as the height offset
+	if heightOverride != -1:
+		height_offset = heightOverride
+
 	if entity:
 		var entity_global_position = entity.global_transform.origin
 		var label_position = entity_global_position + Vector3(0, height_offset, 0)
@@ -29,6 +33,7 @@ func move_labels_above_entity() -> void:
 # Initialize with default values
 func _ready():
 	print("EntityLabelsComponent ready.")
-	set_entity_name("Unnamed")
-	set_level(1)
-	move_labels_above_entity()
+	#set_entity_name("Unnamed")
+	#set_level(1)
+	#move_labels_above_entity()
+	pass

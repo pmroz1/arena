@@ -8,8 +8,10 @@ extends Node3D
 func _ready():
 	print("Character ready.")
 	# Initialize attributes and labels
-	attributes_component.set_entity_name("Hero")
+	attributes_component.set_entity_name("Guard")
 	attributes_component.set_level(5)
+	
+	
 
 	# Update the labels to reflect the attributes
 	label_component.set_entity_name(attributes_component.get_entity_name())
@@ -18,3 +20,5 @@ func _ready():
 	# Simulate attribute changes
 	attributes_component.increase_level()
 	label_component.set_level(attributes_component.get_level())  # Update label to new level
+	label_component.height_offset = 5
+	label_component.move_labels_above_entity(5)
