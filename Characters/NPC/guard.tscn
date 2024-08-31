@@ -9,8 +9,10 @@
 script = ExtResource("1_8svxx")
 
 [node name="AttributesComponent" parent="." instance=ExtResource("1_8fh8l")]
+level = 20
+entityType = 2
 
-[node name="EntityLabelsComponent" parent="." node_paths=PackedStringArray("entity") instance=ExtResource("2_jxnsa")]
-entity = NodePath("../CharacterComponent")
+[node name="EntityLabelsComponent" parent="." instance=ExtResource("2_jxnsa")]
+height_offset = 2.0
 
 [node name="CharacterComponent" parent="." instance=ExtResource("4_3y6yl")]
