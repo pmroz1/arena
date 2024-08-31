@@ -4,9 +4,9 @@ extends Node
 class_name AttributesComponent
 
 # Declare properties
-var entityName: String = "Unnamed"
-var level: int = 1
-
+@export var entityName: String = "Villager"
+@export var level: int = 1
+@export var entityType: CharacterTypes.Type = CharacterTypes.Type.NPC;
 
 # Methods to handle attributes
 func set_entity_name(new_name: String) -> void:

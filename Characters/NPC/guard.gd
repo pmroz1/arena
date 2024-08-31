@@ -20,5 +20,3 @@ func _ready():
 	# Simulate attribute changes
 	attributes_component.increase_level()
 	label_component.set_level(attributes_component.get_level())  # Update label to new level
-	label_component.height_offset = 5
-	label_component.move_labels_above_entity(5)
