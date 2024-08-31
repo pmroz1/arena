@@ -4,8 +4,11 @@ extends Node3D
 class_name EntityLabelsComponent
 
 # Exported references to Label3D nodes
-@export var name_label: Label3D
-@export var level_label: Label3D
+@onready var name_label: Label3D = $Name
+@onready var level_label: Label3D =$Name/Level
+
+@export var entity: Node3D
+@export var height_offset : float = 2.0
 
 # Methods to update the labels
 func set_entity_name(entityName: String) -> void:
@@ -17,8 +20,15 @@ func set_level(level: int) -> void:
 	if level_label:
 		level_label.text = "Level: " + str(level)
 
+func move_labels_above_entity() -> void:
+	if entity:
+		var entity_global_position = entity.global_transform.origin
+		var label_position = entity_global_position + Vector3(0, height_offset, 0)
+		name_label.global_transform.origin = label_position
+
 # Initialize with default values
 func _ready():
 	print("EntityLabelsComponent ready.")
 	set_entity_name("Unnamed")
 	set_level(1)
+	move_labels_above_entity()

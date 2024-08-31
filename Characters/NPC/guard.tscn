@@ -10,6 +10,7 @@ script = ExtResource("1_lw88p")
 
 [node name="AttributesComponent" parent="." instance=ExtResource("1_8fh8l")]
 
-[node name="EntityLabelsComponent" parent="." instance=ExtResource("2_jxnsa")]
+[node name="EntityLabelsComponent" parent="." node_paths=PackedStringArray("entity") instance=ExtResource("2_jxnsa")]
+entity = NodePath("../CharacterComponent")
 
 [node name="CharacterComponent" parent="." instance=ExtResource("4_3y6yl")]
