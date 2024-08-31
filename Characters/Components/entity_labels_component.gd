@@ -24,19 +24,18 @@ func move_labels_above_entity(heightOverride: int = -1) -> void:
 
 func getCharacterTypeColor():
 	# player, npc, enemy, boss, special
+	print("type", attributes.entityType)
 	match attributes.entityType:
-		"player":
-			return Color(0, 1, 0)
-		"npc":
-			return Color(0, 0, 1)
-		"enemy":
-			return Color(1, 0, 0)
-		"boss":
-			return Color(1, 0, 1)
-		"special":
-			return Color(1, 1, 0)
+		CharacterTypes.Type.NPC:
+			return Color(0, 1, 0)  # Green for NPC
+		CharacterTypes.Type.Enemy:
+			return Color(1, 0, 0)  # Red for Enemy
+		CharacterTypes.Type.Boss:
+			return Color(0, 0, 1)  # Blue for Boss
+		CharacterTypes.Type.Special:
+			return Color(1, 1, 0)  # Yellow for Special Object
 		_:
-			return Color(1, 1, 1)
+			return Color(1, 1, 1)  # White for default
 	
 func change_labels_color(color: Color):
 	print("color", color)
@@ -44,6 +43,7 @@ func change_labels_color(color: Color):
 	level_label.modulate = color
 
 func update_labels():
+	print("Updating labels.")
 	name_label.text = attributes.entityName
 	level_label.text = str(attributes.level)
 	change_labels_color(getCharacterTypeColor())
