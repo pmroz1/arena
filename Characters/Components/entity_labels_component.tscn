@@ -12,3 +12,4 @@ text = "Default Entity"
 [node name="Level" type="Label3D" parent="Name"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.236835, 0)
 text = "Lv 0."
+font_size = 16

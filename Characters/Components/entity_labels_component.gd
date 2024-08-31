@@ -45,7 +45,7 @@ func change_labels_color(color: Color):
 func update_labels():
 	print("Updating labels.")
 	name_label.text = attributes.entityName
-	level_label.text = str(attributes.level)
+	level_label.text = "Lv." + str(attributes.level)
 	change_labels_color(getCharacterTypeColor())
 	pass
 
