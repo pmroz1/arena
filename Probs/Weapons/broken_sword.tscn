@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0dk24w86rqes"]
+
+[ext_resource type="PackedScene" uid="uid://db8yptgmxj4y3" path="res://Probs/Components/weapon_attributes_component.tscn" id="1_ar3ht"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_t7r5v"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a0ohj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jl3sw"]
+
+[sub_resource type="Animation" id="Animation_fc4gv"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mqjeg"]
+_data = {
+"idle": SubResource("Animation_fc4gv")
+}
+
+[node name="BrokenSword" type="Node3D"]
+
+[node name="WeaponAttributesComponent" parent="." instance=ExtResource("1_ar3ht")]
+weaponName = "Broken Sword"
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(0.121101, 0, 0, 0, 0.582096, 0, 0, 0, 0.073921, 0, 1.1209, 0)
+mesh = SubResource("CapsuleMesh_t7r5v")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Model/MeshInstance3D"]
+transform = Transform3D(1.82141, 0, 0, 0, -0.103225, 0, 0, 0, 3.31972, 0, -0.799447, 0)
+mesh = SubResource("CylinderMesh_a0ohj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Model/MeshInstance3D"]
+transform = Transform3D(0.643414, 0, 0, 0, 0.281192, 0, 0, 0, 1.61012, 0.0157062, -1.05403, -0.0111951)
+mesh = SubResource("CylinderMesh_jl3sw")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mqjeg")
+}

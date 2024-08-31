@@ -17,3 +17,38 @@ enum RoutineType {
 	Patrol,
 	Heal,
 }
+
+enum WeaponType {
+	Sword,
+	Mace,
+	Axe,
+	Staff,
+	Bow,
+	Shield,
+	Special
+}
+
+enum ArmorType {
+	Head,
+	Body,
+	Hands,
+	Legs,
+	Feet,
+	Accessory,
+}
+
+enum AccessoryType {
+	Necklace,
+	Ring,
+	Bracelet,
+	Ear,
+	Other,
+}
+
+enum ConsumableType {
+	Health,
+	Mana,
+	Stamina,
+	Buff,
+	Other,
+}

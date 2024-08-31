@@ -12,6 +12,5 @@ script = ExtResource("1_8svxx")
 level = 20
 
 [node name="EntityLabelsComponent" parent="." instance=ExtResource("2_jxnsa")]
-height_offset = 2.0
 
 [node name="CharacterComponent" parent="." instance=ExtResource("4_3y6yl")]

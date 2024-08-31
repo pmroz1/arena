@@ -1,0 +1,86 @@
+extends Node
+# WeaponTypeDefaultConfig
+
+# WeaponTypeDefaultConfig
+# This script is used to define the default values for each weapon type.
+
+const WeaponTypeDefaultConfig = {
+    "Sword": {
+        "damage": 10,
+        "attack_speed": 1.0,
+        "range": 1.0,
+        "critical_chance": 0.1,
+        "critical_damage": 1.5,
+        "stamina_cost": 10,
+        "mana_cost": 0,
+        "cooldown": 1.0,
+        "special_effect": null,
+    },
+    "Mace": {
+        "damage": 15,
+        "attack_speed": 0.8,
+        "range": 1.0,
+        "critical_chance": 0.05,
+        "critical_damage": 2.0,
+        "stamina_cost": 15,
+        "mana_cost": 0,
+        "cooldown": 1.5,
+        "special_effect": null,
+    },
+    "Axe": {
+        "damage": 20,
+        "attack_speed": 0.6,
+        "range": 1.0,
+        "critical_chance": 0.2,
+        "critical_damage": 1.8,
+        "stamina_cost": 20,
+        "mana_cost": 0,
+        "cooldown": 2.0,
+        "special_effect": null,
+    },
+    "Staff": {
+        "damage": 5,
+        "attack_speed": 1.2,
+        "range": 2.0,
+        "critical_chance": 0.0,
+        "critical_damage": 1.0,
+        "stamina_cost": 5,
+        "mana_cost": 10,
+        "cooldown": 1.0,
+        "special_effect": null,
+    },
+    "Bow": {
+        "damage": 10,
+        "attack_speed": 1.0,
+        "range": 10.0,
+        "critical_chance": 0.1,
+        "critical_damage": 1.5,
+        "stamina_cost": 10,
+        "mana_cost": 0,
+        "cooldown": 1.0,
+        "special_effect": null,
+    },
+    "Shield": {
+        "damage": 0,
+        "attack_speed": 1.0,
+        "range": 1.0,
+        "critical_chance": 0.0,
+        "critical_damage": 1.0,
+        "stamina_cost": 0,
+        "mana_cost": 0,
+        "cooldown": 0.0,
+        "special_effect": null,
+    },
+    "Special": {
+        "damage": 0,
+        "attack_speed": 0.0,
+        "range": 0.0,
+        "critical_chance": 0.0,
+        "critical_damage": 0.0,
+        "stamina_cost": 0,
+        "mana_cost": 0,
+        "cooldown": 0.0,
+        "special_effect": null,
+    },
+}
+

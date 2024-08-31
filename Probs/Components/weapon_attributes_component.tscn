@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db8yptgmxj4y3"]
+
+[ext_resource type="Script" path="res://Probs/Components/weapon_attributes_component.gd" id="1_4l3in"]
+
+[node name="WeaponAttributesComponent" type="Node3D"]
+script = ExtResource("1_4l3in")
