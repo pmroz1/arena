@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://by0lphit16gph"]
+[gd_scene load_steps=8 format=3 uid="uid://by0lphit16gph"]
 
 [ext_resource type="PackedScene" uid="uid://c03runu1t7450" path="res://Terrain/floor.tscn" id="1_7mxpd"]
 [ext_resource type="PackedScene" uid="uid://d2y5nsgmso7ep" path="res://Player/player.tscn" id="2_jn0fa"]
-[ext_resource type="PackedScene" uid="uid://c8j5drmetlqwq" path="res://Characters/NPC/inkeeper.tscn" id="3_xw14l"]
-[ext_resource type="PackedScene" uid="uid://b24bymrbda0ti" path="res://Characters/Enemies/slime.tscn" id="4_my03w"]
+[ext_resource type="PackedScene" uid="uid://bvoxohs7wa0x1" path="res://Characters/NPC/guard.tscn" id="3_3xqcj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_syjxx"]
 sky_top_color = Color(0.184555, 0.463981, 0.713626, 1)
@@ -44,15 +43,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 [node name="Player" parent="." instance=ExtResource("2_jn0fa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98503, 1.037, -0.614481)
 
-[node name="Inkeeper" parent="." instance=ExtResource("3_xw14l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51631, 1.35166, -4.78154)
-
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_i4xca")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
 transform = Transform3D(0.580181, 0, -0.814488, 0, 1, 0, 0.814488, 0, 0.580181, 2.41462, 0, -2.79344)
 
-[node name="Slime" parent="Path3D/PathFollow3D" instance=ExtResource("4_my03w")]
-transform = Transform3D(0.580182, 0, 0.814487, 0, 1, 0, -0.814487, 0, 0.580182, -2.54482, 0.532754, 1.15185)
-routineType = 1
+[node name="Guard" parent="." instance=ExtResource("3_3xqcj")]

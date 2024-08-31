@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb5dli5xmt257"]
+
+[ext_resource type="Script" path="res://Characters/Components/entity_labels_component.gd" id="1_qnpsm"]
+
+[node name="EntityLabelsComponent" type="Node3D"]
+script = ExtResource("1_qnpsm")
+
+[node name="Name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.83669, 0)
+text = "Default Entity"
+
+[node name="Level" type="Label3D" parent="Name"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.236835, 0)
+text = "Lv 0."

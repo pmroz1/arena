@@ -1,34 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfhbfr1dls1ru"]
+[gd_scene load_steps=5 format=3 uid="uid://bvoxohs7wa0x1"]
 
-[ext_resource type="Script" path="res://Characters/game_character.gd" id="1_n51nx"]
+[ext_resource type="PackedScene" uid="uid://fh7pygtcougk" path="res://Characters/Components/attributes_component.tscn" id="1_8fh8l"]
+[ext_resource type="Script" path="res://Characters/Components/entity_labels_component.gd" id="1_lw88p"]
+[ext_resource type="PackedScene" uid="uid://cb5dli5xmt257" path="res://Characters/Components/entity_labels_component.tscn" id="2_jxnsa"]
+[ext_resource type="PackedScene" uid="uid://dvjjx6q0t6612" path="res://Characters/Components/character_component.tscn" id="4_3y6yl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8td7m"]
-albedo_color = Color(1, 1, 0.2, 1)
-metallic = 0.65
-roughness = 0.75
+[node name="Guard" type="Node3D"]
+script = ExtResource("1_lw88p")
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_db3tf"]
+[node name="AttributesComponent" parent="." instance=ExtResource("1_8fh8l")]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jgxen"]
+[node name="EntityLabelsComponent" parent="." instance=ExtResource("2_jxnsa")]
 
-[node name="Guard" type="CharacterBody3D"]
-script = ExtResource("1_n51nx")
-characterName = "Guard"
-level = 20
-
-[node name="name" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39959, 0)
-text = "GAME CHARACTER"
-
-[node name="level" type="Label3D" parent="name"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.145385, 0)
-text = "Lv 0."
-font_size = 16
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_8td7m")
-mesh = SubResource("CapsuleMesh_db3tf")
-skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_jgxen")
+[node name="CharacterComponent" parent="." instance=ExtResource("4_3y6yl")]
